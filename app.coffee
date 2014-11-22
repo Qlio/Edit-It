@@ -1,0 +1,2 @@
+$ ->
+  $(".double-click").editit "dblclick"
