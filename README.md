@@ -1,4 +1,4 @@
 Edit It!
 ========
 
-In-place (inline) editing with jQuery.
+In-place/inline editing with jQuery.
