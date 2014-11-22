@@ -1,2 +1,4 @@
 $ ->
-  $(".double-click").editit "dblclick"
+  options = url: "/hello"
+
+  $(".double-click").editit "dblclick", options

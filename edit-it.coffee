@@ -1,10 +1,13 @@
-$.fn.editit = (event) ->
+$.fn.editit = (event, options) ->
+  $defaults = url: ""
+  $settings = $.extend($defaults, options)
+
   $selector = $(this).selector
   onChange = (input) ->
     data = {}
     data[$(input).attr("name")] = $(input).val()
 
-    $.post "", data
+    $.post $settings.url, data
 
   $(document).on event, $selector, ->
     return if $($selector).find("input").length
