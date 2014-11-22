@@ -19,13 +19,13 @@ $.fn.editit = (event, options) ->
     $input.focus().select()
 
     $input.on
-      "focusout": ->
+      focusout: ->
         onChange this
         $(this).closest($selector).html $input.val()
-      "change": ->
+      change: ->
         onChange this
         $(this).closest($selector).html $input.val()
-      "keypress": (e) ->
+      keypress: (e) ->
         if e.keyCode == 13
           onChange this
           $(this).closest($selector).html $input.val()
