@@ -1,87 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Edit-it! - jQuery plugin for fast inline edit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>Edit-it by Qlio</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
+      <div class="inner">
         <h1>Edit-it</h1>
-        <p>Simple jQuery plugin for fast inline edit.</p>
+        <h2>Simple jQuery plugin for fast edit.</h2>
+        <a href="https://github.com/Qlio/Edit-It" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-        <p class="view"><a href="https://github.com/Qlio/Edit-It">View the Project on GitHub <small>Qlio/Edit-It</small></a></p>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a id="edit-it" class="anchor" href="#edit-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Edit It!</h3>
 
+<p>Simple jQuery plugin for fast edit.</p>
 
-        <ul>
-          <li><a href="https://github.com/Qlio/Edit-It/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Qlio/Edit-It/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Qlio/Edit-It">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-          <a id="edit-it" class="anchor" href="#edit-it" aria-hidden="true">
-            <span class="octicon octicon-link"></span>
-          </a>Edit It!
-        </h3>
+<h2>
+<a id="in-progress" class="anchor" href="#in-progress" aria-hidden="true"><span class="octicon octicon-link"></span></a>In progress...</h2>
+        </section>
 
-        <p>Simple jQuery plugin for fast inline edit.</p>
+        <aside id="sidebar">
+          <a href="https://github.com/Qlio/Edit-It/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Qlio/Edit-It/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-        <h2>
-          <a id="in-progress" class="anchor" href="#in-progress" aria-hidden="true">
-            <span class="octicon octicon-link"></span>
-          </a>Usage
-        </h2>
+          <p class="repo-owner"><a href="https://github.com/Qlio/Edit-It"></a> is maintained by <a href="https://github.com/Qlio">Qlio</a>.</p>
 
-        <h3>JavaScript</h3>
-<div class="highlight"><pre><span class="nx">options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/change-name&quot;</span><span class="p">};</span>
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.double-click&quot;</span><span class="p">).</span><span class="nx">editit</span><span class="p">(</span><span class="s2">&quot;dblclick&quot;</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.click&quot;</span><span class="p">).</span><span class="nx">editit</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-</pre></div>
-
-        <h3>HTML</h3>
-<div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;th&gt;</span>Column 1<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;th&gt;</span>Column 2<span class="nt">&lt;/th&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;double-click&quot;</span> <span class="na">data-name=</span><span class="s">&quot;value-1&quot;</span><span class="nt">&gt;</span>Double Click Me!<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;click&quot;</span> <span class="na">data-name=</span><span class="s">&quot;value-2&quot;</span><span class="nt">&gt;</span>Just Click Me!<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-</pre></div>
-
-        <h3>Result:</h3>
-        <table>
-          <tr>
-            <th width="50%">Column 1</th>
-            <th width="50%">Column 2</th>
-          </tr>
-          <tr>
-            <td class="double-click" data-name="value-1">Double Click Me!</td>
-            <td class="click" data-name="value-2">Just Click Me!</td>
-          </tr>
-        </table>
-
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Qlio">Qlio</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    <script src="javascripts/jquery-2.1.1.min.js"></script>
-    <script src="javascripts/edit-it.min.js"></script>
-    <script src="javascripts/app.min.js"></script>
+
+  
   </body>
 </html>
