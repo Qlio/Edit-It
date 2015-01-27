@@ -9,7 +9,7 @@ $.fn.editit = (event, options) ->
   $selector = $(this).selector
   onChange = (input) ->
     $.each $(input).parent().data(), (key, value) ->
-      $settings.data[key] = value
+      unless key == "name" then $settings.data[key] = value
     $settings.data[$(input).attr("name")] = $(input).val()
 
     $.post($settings.url, $settings.data, $settings.success)
