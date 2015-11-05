@@ -19,7 +19,8 @@ $.fn.editit = (event, options) ->
     return if $($selector).find("input").length
 
     input = $("""
-      <input type="text" value="#{ $(@).html() }" name="#{ $(@).data("name") }">
+      <input type="text" value="#{ $(@).html().trim() }"
+                         name="#{ $(@).data("name") }">
     """)
     $(@).html(input)
     input.focus().select()
